@@ -1,0 +1,237 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 14px;
+    background: #090d1b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.marco {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid #465477;
+    border-radius: 18px;
+    background: #111a32;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    min-height: 135px;
+    padding: 28px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    border-radius: 13px;
+    text-align: center;
+    background: linear-gradient(110deg, #50317f, #176e7d);
+}
+
+.encabezado h1 {
+    font-size: 28px;
+}
+
+.encabezado p {
+    font-size: 16px;
+}
+
+/* DISTRIBUCIÓN */
+.zona-trabajo {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+/* ÁREA GENERATIVE ART */
+.zona-arte {
+    min-width: 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #0e172d;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* PANEL CREATIVO */
+.panel {
+    padding: 24px;
+    border-radius: 14px;
+    background: #202d4d;
+}
+
+.panel h2 {
+    margin-bottom: 14px;
+    color: #8ce9f3;
+    font-size: 30px;
+}
+
+.instruccion {
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+/* ANIMALES */
+.animales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.animal {
+    min-height: 86px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #344365;
+    border: 2px solid transparent;
+}
+
+.animal .emoji {
+    font-size: 27px;
+}
+
+.animal.activo {
+    border-color: #9beaf4;
+    background: #50317f;
+}
+
+/* SEPARADORES */
+.separador {
+    height: 1px;
+    margin: 19px 0;
+    background: #4c5c7c;
+}
+
+/* PALETAS */
+.paletas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.paleta {
+    min-height: 55px;
+    background: #583b83;
+    font-size: 16px;
+}
+
+#paleta2 {
+    background: #176e7d;
+}
+
+.paleta.activo {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* BOTONES PRINCIPALES */
+.acciones {
+    display: grid;
+    gap: 10px;
+}
+
+.acciones button {
+    min-height: 60px;
+    font-size: 16px;
+}
+
+.principal {
+    background: #8055d8;
+}
+
+.secundario {
+    background: #176e7d;
+}
+
+/* ESTADO */
+.estado {
+    margin-top: 14px;
+    color: #bcecf2;
+    font-size: 12px;
+}
+
+/* TEXTO INFERIOR */
+.nota {
+    margin: 12px 4px 0;
+    color: #cbd6f2;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+footer {
+    padding: 20px 5px 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #cbd6f2;
+    font-size: 13px;
+}
+
+footer a {
+    color: #8ce9f3;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 780px) {
+    .zona-trabajo {
+        grid-template-columns: 1fr;
+    }
+
+    .marco {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 430px) {
+    body {
+        padding: 7px;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+
+    .encabezado h1 {
+        font-size: 21px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}

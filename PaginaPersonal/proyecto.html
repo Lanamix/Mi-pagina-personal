@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Estudio Generativo</title>
+
+    <link rel="stylesheet" href="stiles.css">
+</head>
+<body>
+  <main class="marco">
+
+    <header class="encabezado">
+      <h1>MI ESTUDIO GENERATIVO</h1>
+      <p>Diseño + código + experimentación</p>
+    </header>
+
+    <section class="zona-trabajo">
+
+      <div class="zona-arte">
+        <canvas id="miCanvas" width="700" height="560"></canvas>
+        <p class="nota">
+          Cada animal crea una composición diferente.
+          ¡Experimenta con las paletas!
+        </p>
+      </div>
+
+      <aside class="panel">
+        <h2>Panel creativo</h2>
+
+        <p class="instruccion">1. Selecciona un animal:</p>
+
+        <div class="animales">
+          <button class="animal activo" data-animal="perro" type="button">
+            <span class="emoji">🐶</span>
+            <span>Perro</span>
+          </button>
+
+          <button class="animal" data-animal="gato" type="button">
+            <span class="emoji">🐱</span>
+            <span>Gato</span>
+          </button>
+
+          <button class="animal" data-animal="conejo" type="button">
+            <span class="emoji">🐰</span>
+            <span>Conejo</span>
+          </button>
+        </div>
+
+        <div class="separador"></div>
+
+        <p class="instruccion">2. Selecciona una paleta de color:</p>
+
+        <div class="paletas">
+          <button id="paleta1" class="paleta activo" type="button">
+            Paleta 1
+          </button>
+
+          <button id="paleta2" class="paleta" type="button">
+            Paleta 2
+          </button>
+        </div>
+
+        <div class="separador"></div>
+
+        <p class="instruccion">3. Crea y guarda tu composición:</p>
+
+        <div class="acciones">
+          <button id="generar" class="principal" type="button">
+            ✦ Generar composición
+          </button>
+
+          <button id="guardar" class="secundario" type="button">
+            ↓ Guardar PNG
+          </button>
+        </div>
+
+        <p id="estado" class="estado">
+          Animal seleccionado: Perro
+        </p>
+
+      </aside>
+    </section>
+
+    <footer>
+      <p>ANIMAL GENERATIVE ART · CREATIVE CODE</p>
+      <a href="../index.html">← Regresar a la landing page grupal</a>
+    </footer>
+
+  </main>
+
+  <script src="stiles.js"></script>
+</body>
+</html>
